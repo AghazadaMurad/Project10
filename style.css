@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a2036;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b1b9d8;
+}
+
+.container {
+  background-color: #242b42;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 890px;
+}
+
+.sidebar {
+  padding: 20px;
+  /* margin-right: 40px; */
+  background-color: #1a2036;
+  border-radius: inherit;
+  height: 553px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.menu-item {
+  padding: 15px;
+  border-radius: 10px;
+}
+.menu-item a {
+  text-decoration: none;
+  color: #b1b9d8;
+  font-size: 30px;
+}
+
+li:hover {
+  background-color: #242b42;
+}
+
+li.active {
+  background-color: #242b42;
+}
+
+.menu {
+  list-style: none;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-title span {
+  font-size: 30px;
+}
+
+.header-title h1 {
+  font-weight: 400;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.main {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.apps {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: #1a2036 solid 2px;
+  background-color: #1a2036;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 8px;
+
+  transition: all 500ms linear;
+}
+
+.icon-box {
+  width: 9px;
+  height: 9px;
+  border: #b1b9d8 solid 1px;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  transition: all 300ms linear;
+}
+/* 
+.apps:hover .box1 {
+  transform: translate(6px, 5px);
+}
+.apps:hover .box2 {
+  transform: translate(-5px, 5px);
+}
+.apps:hover .box3 {
+  transform: translate(6px, -6px);
+}
+.apps:hover .box4 {
+  transform: translate(-5px, -6px);
+}
+.apps:hover {
+  transform: scale(1.1) rotate(360deg);
+} */
+
+.burgermenu {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: #1a2036 solid 2px;
+  padding: 8.5px 8px;
+  transition: all 300ms linear;
+}
+
+.burger1,
+.burger2 {
+  transition: all 300ms linear;
+}
+
+.burgermenu:hover .burger1 {
+  transform: translateY(6px);
+}
+.burgermenu:hover .burger2 {
+  transform: translateY(-5px);
+}
+
+.burgermenu:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+.burgermenu div {
+  width: 20px;
+  height: 7px;
+  border: #b1b9d8 solid 1px;
+  border-radius: 3px;
+}
+
+.burgermenu div {
+  margin-bottom: 4px;
+}
+
+.header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+}
+
+.card {
+  width: 160px;
+  height: 180px;
+  background-color: #1a2036;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  position: absolute;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card:hover::after {
+  transform: scale(1.2);
+  background-color: rgba(11, 17, 39, 1);
+}
+
+#card4 {
+  margin-right: 0px;
+}
+
+#add-card {
+  background-color: #2e3650;
+}
+
+#add-card a {
+  text-decoration: none;
+  color: #b1b9d8;
+  background-color: #1a2036;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-solid {
+}
+
+.add {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.card-image {
+  width: 60px;
+  height: 60px;
+  background-image: url(/cuisine.webp);
+  border-radius: 50%;
+  background-size: cover;
+  margin-bottom: 10px;
+  transition: all 500ms ease-in-out;
+  z-index: 2;
+}
+
+#art {
+  background-image: url(/art.jpeg);
+}
+#workout {
+  background-image: url(/workout.webp);
+}
+#yoga {
+  background-image: url(/yoga.avif);
+}
+#gaming {
+  background-image: url(/gaming.jpeg);
+}
+#hiking {
+  background-image: url(/hiking.avif);
+}
+
+.card:hover .card-image {
+  transform: scale(1.5) rotate(360deg);
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  z-index: 2;
+}
+
+.card-members {
+  font-size: 10px;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
+.action {
+  z-index: 2;
+}
+
+button {
+  background-color: #b1b9d8;
+  border: 1px solid #b1b9d8;
+  color: #242b42;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-right: 5px;
+  transition: all 500ms linear;
+  opacity: 0;
+}
+
+.notf {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #8e66ff;
+  z-index: 3;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all 500ms linear;
+}
+.leave {
+  transform: translatex(-30px);
+}
+
+.invite {
+  transform: translatex(30px);
+}
+
+.card:hover .notf {
+  transform: translate(15px, -15px);
+  opacity: 0;
+}
+
+.card:hover .leave {
+  transform: translatex(0px);
+  opacity: 1;
+}
+.card:hover .invite {
+  transform: translatex(0px);
+  opacity: 1;
+}
